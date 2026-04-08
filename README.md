@@ -1,2 +1,3 @@
-# 2026_likelion_backend
+# 2026_14th_study_BE
+
 멋쟁이사자처럼 충북대 백엔드 세션 레포지토리
