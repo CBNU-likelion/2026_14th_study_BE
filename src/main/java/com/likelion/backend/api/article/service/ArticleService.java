@@ -28,11 +28,11 @@ public class ArticleService {
     @Transactional
     public ArticleCreateResponseDTO createArticle(ArticleCreateRequestDTO req) {
 
-        Article article = Article.create(
-                req.title(),
-                req.content(),
-                req.author()
-        );
+        Article article = Article.builder()
+                .title(req.title())
+                .content(req.content())
+                .author(req.author())
+                .build();
 
         return ArticleCreateResponseDTO.from(articleRepository.save(article));
     }

@@ -36,14 +36,6 @@ public class Article extends BaseTimeEntity {
         this.author = author;
     }
 
-    public static Article create(String title, String content, String author) {
-        return Article.builder()
-            .title(title)
-            .content(content)
-            .author(author)
-            .build();
-    }
-
     public void update(String title, String content) {
         this.title = title;
         this.content = content;
