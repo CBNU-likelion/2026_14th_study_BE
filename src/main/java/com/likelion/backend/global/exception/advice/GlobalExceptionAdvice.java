@@ -21,6 +21,7 @@ public class GlobalExceptionAdvice {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ApiResponse<Void>> handleException(Exception e) {
+
         return ResponseEntity
                 .status(500)
                 .body(ApiResponse.fail(500, e.getMessage()));
