@@ -30,16 +30,6 @@ management:
     health:
       show-details: always
 
-# Logging
-logging:
-  pattern:
-    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
-  level:
-    root: info                            # 기본 로그는 INFO 레벨
-    com.likelion: debug                   # 애플리케이션 로그는 DEBUG 레벨
-    org.hibernate.SQL: debug              # JPA 쿼리 로깅
-    org.hibernate.orm.jdbc.bind: trace    # JPA 바인딩 변수 로깅 (? -> 실제 값)
-
 # Spring Docs (Swagger UI) 세팅
 springdoc:
   api-docs:
