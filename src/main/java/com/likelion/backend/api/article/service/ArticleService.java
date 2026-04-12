@@ -6,6 +6,7 @@ import com.likelion.backend.api.article.dto.response.ArticleCreateResponseDTO;
 import com.likelion.backend.api.article.dto.response.ArticleDetailResponseDTO;
 import com.likelion.backend.api.article.entity.Article;
 import com.likelion.backend.api.article.repository.ArticleRepository;
+import com.likelion.backend.global.annotation.TrackExecutionTime;
 import com.likelion.backend.global.exception.ArticleNotFoundException;
 import com.likelion.backend.global.response.ErrorStatus;
 import lombok.RequiredArgsConstructor;
@@ -26,6 +27,7 @@ public class ArticleService {
      * @return 생성된 게시글의 id, 제목, 내용, 작성자, 생성 시각
      */
     @Transactional
+    @TrackExecutionTime
     public ArticleCreateResponseDTO createArticle(ArticleCreateRequestDTO req) {
 
         Article article = Article.create(
