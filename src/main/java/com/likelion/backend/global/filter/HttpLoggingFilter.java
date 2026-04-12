@@ -14,6 +14,10 @@ import org.springframework.web.filter.OncePerRequestFilter;
 import java.io.IOException;
 import java.util.UUID;
 
+/**
+ * 모든 HTTP 요청에 대해 로깅을 하는 필터 (4주차 필수 요구사항 1번)<br>
+ *
+ */
 @Slf4j
 @Component
 @Order(1)
