@@ -2,6 +2,7 @@ package com.likelion.backend.global.exception.advice;
 
 import com.likelion.backend.global.exception.BaseException;
 import com.likelion.backend.global.response.ApiResponse;
+import com.likelion.backend.global.response.ErrorStatus;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -24,6 +25,6 @@ public class GlobalExceptionAdvice {
 
         return ResponseEntity
                 .status(500)
-                .body(ApiResponse.fail(500, e.getMessage()));
+                .body(ApiResponse.fail(500, ErrorStatus.INTERNAL_SERVER_ERROR.getMessage()));
     }
 }
