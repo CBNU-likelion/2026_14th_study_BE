@@ -47,7 +47,7 @@ public class ArticleService {
 
         Article article = articleRepository.findById(articleId)
                 .orElseThrow(() -> new ArticleNotFoundException(ErrorStatus.NOT_FOUND_ARTICLE));
-
+        // 과제 테스트
         return ArticleDetailResponseDTO.from(article);
     }
 
