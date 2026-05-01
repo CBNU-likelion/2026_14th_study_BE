@@ -17,11 +17,11 @@
 - [x] 전역적으로 사용할 로깅 포맷 및 패키지 구조 결정 (`global.logging`)
 
 ### [Phase 2] 필수 요구사항 1: HTTP 요청 로깅 (Filter)
-- [ ] `com.likelion.backend.global.logging.filter` 패키지 관리
-- [ ] `LoggingFilter` 클래스 생성 (`OncePerRequestFilter` 상속)
-    - [ ] `doFilterInternal` 메서드에서 요청 메서드, URI 추출
-    - [ ] `filterChain.doFilter` 호출 후 응답 상태 코드 로깅
-- [ ] `FilterRegistrationBean`을 사용하여 필터 등록 (필요한 경우)
+- [x] `com.likelion.backend.global.logging.filter` 패키지 관리
+- [x] `LoggingFilter` 클래스 생성 (`OncePerRequestFilter` 상속)
+    - [x] `doFilterInternal` 메서드에서 요청 메서드, URI 추출
+    - [x] `filterChain.doFilter` 호출 후 응답 상태 코드 로깅
+- [x] `FilterRegistrationBean`을 사용하여 필터 등록 (필요한 경우)
 
 ### [Phase 3] 필수 요구사항 2 & 우대 요구사항 2: Article API 실행 시간 측정 (AOP)
 - [ ] `com.likelion.backend.global.logging.annotation` 패키지 관리
