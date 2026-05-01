@@ -7,6 +7,7 @@ import com.likelion.backend.api.article.dto.response.ArticleDetailResponseDTO;
 import com.likelion.backend.api.article.entity.Article;
 import com.likelion.backend.api.article.repository.ArticleRepository;
 import com.likelion.backend.global.exception.ArticleNotFoundException;
+import com.likelion.backend.global.logging.annotation.LogExecutionTime;
 import com.likelion.backend.global.response.ErrorStatus;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -25,6 +26,7 @@ public class ArticleService {
      * @param req 생성할 게시글의 제목, 내용, 작성자
      * @return 생성된 게시글의 id, 제목, 내용, 작성자, 생성 시각
      */
+    @LogExecutionTime
     @Transactional
     public ArticleCreateResponseDTO createArticle(ArticleCreateRequestDTO req) {
 
@@ -43,6 +45,7 @@ public class ArticleService {
      * @return 조회된 게시글의 id, 제목, 내용, 작성자, 생성 시각, 수정 시각
      * @throws ArticleNotFoundException 해당 id의 게시글이 존재하지 않는 경우 발생
      */
+    @LogExecutionTime
     public ArticleDetailResponseDTO getArticleDetail(Long articleId) {
 
         Article article = articleRepository.findById(articleId)
@@ -58,6 +61,7 @@ public class ArticleService {
      * @return 수정된 게시글의 id, 제목, 내용, 작성자, 생성 시각, 수정 시각
      * @throws ArticleNotFoundException 해당 id의 게시글이 존재하지 않는 경우
      */
+    @LogExecutionTime
     @Transactional
     public ArticleDetailResponseDTO updateArticle(Long articleId, ArticleUpdateRequestDTO req) {
 
@@ -74,6 +78,7 @@ public class ArticleService {
      * @param articleId 삭제할 게시글 id
      * @throws ArticleNotFoundException 해당 id의 게시글이 존재하지 않는 경우 발생
      */
+    @LogExecutionTime
     @Transactional
     public void deleteArticle(Long articleId) {
 

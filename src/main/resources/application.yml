@@ -42,3 +42,10 @@ springdoc:
     try-it-out-enabled: true
     persist-authorization: true
   show-actuator: true
+
+# Logging 세팅
+logging:
+  level:
+    com.likelion.backend: info
+    org.hibernate.SQL: debug
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
