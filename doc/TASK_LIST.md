@@ -24,14 +24,14 @@
 - [x] `FilterRegistrationBean`을 사용하여 필터 등록 (필요한 경우)
 
 ### [Phase 3] 필수 요구사항 2 & 우대 요구사항 2: Article API 실행 시간 측정 (AOP)
-- [ ] `com.likelion.backend.global.logging.annotation` 패키지 관리
-- [ ] `@LogExecutionTime` 커스텀 어노테이션 정의
-- [ ] `com.likelion.backend.global.logging.aspect` 패키지 관리
-- [ ] `LoggingAspect` 클래스 생성
-    - [ ] `@Around` 어드바이스 구현
-    - [ ] 포인트컷을 `@annotation(LogExecutionTime)`으로 설정
-    - [ ] StopWatch 등을 활용해 실행 시간 측정 및 로깅
-- [ ] `ArticleController` 또는 `ArticleService` 메서드에 `@LogExecutionTime` 적용 (비즈니스 로직 수정 없이 어노테이션만 추가)
+- [x] `com.likelion.backend.global.logging.annotation` 패키지 관리
+- [x] `@LogExecutionTime` 커스텀 어노테이션 정의
+- [x] `com.likelion.backend.global.logging.aspect` 패키지 관리
+- [x] `LoggingAspect` 클래스 생성
+    - [x] `@Around` 어드바이스 구현
+    - [x] 포인트컷을 `@annotation(LogExecutionTime)`으로 설정
+    - [x] StopWatch 등을 활용해 실행 시간 측정 및 로깅
+- [x] `ArticleController` 또는 `ArticleService` 메서드에 `@LogExecutionTime` 적용 (비즈니스 로직 수정 없이 어노테이션만 추가)
 
 ### [Phase 4] 우대 요구사항 1: 예외 발생 시 로깅 (AOP)
 - [ ] `LoggingAspect`에 예외 로깅 기능 추가
