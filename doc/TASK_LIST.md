@@ -34,17 +34,17 @@
 - [x] `ArticleController` 또는 `ArticleService` 메서드에 `@LogExecutionTime` 적용 (비즈니스 로직 수정 없이 어노테이션만 추가)
 
 ### [Phase 4] 우대 요구사항 1: 예외 발생 시 로깅 (AOP)
-- [ ] `LoggingAspect`에 예외 로깅 기능 추가
-    - [ ] `@AfterThrowing` 어드바이스 구현
-    - [ ] 포인트컷을 `com.likelion.backend.api.article` 패키지 내로 설정
-    - [ ] 메서드 이름과 예외 타입, 메시지 로깅
-- [ ] `GlobalExceptionAdvice`와 역할이 중복되지 않는지 확인 (Advice는 응답 반환, AOP는 로깅)
+- [x] `LoggingAspect`에 예외 로깅 기능 추가
+    - [x] `@AfterThrowing` 어드바이스 구현
+    - [x] 포인트컷을 `com.likelion.backend.api.article` 패키지 내로 설정
+    - [x] 메서드 이름과 예외 타입, 메시지 로깅
+- [x] `GlobalExceptionAdvice`와 역할이 중복되지 않는지 확인 (Advice는 응답 반환, AOP는 로깅)
 
 ### [Phase 5] 검증 및 마무리
-- [ ] API 호출을 통해 콘솔에 로그가 정상적으로 남는지 확인 (Swagger 활용)
-- [ ] `System.out.println` 사용 여부 전수 조사
-- [ ] 체크리스트 항목 최종 점검
-- [ ] README.md 또는 문서에 Filter 선택 이유 등 작성
+- [x] API 호출을 통해 콘솔에 로그가 정상적으로 남는지 확인 (Swagger 활용)
+- [x] `System.out.println` 사용 여부 전수 조사
+- [x] 체크리스트 항목 최종 점검
+- [x] README.md 또는 문서에 Filter 선택 이유 등 작성
 
 ---
 
