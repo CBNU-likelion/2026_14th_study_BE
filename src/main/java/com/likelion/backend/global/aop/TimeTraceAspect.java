@@ -1,7 +1,9 @@
 package com.likelion.backend.global.aop;
 
 import lombok.extern.slf4j.Slf4j;
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
@@ -37,5 +39,23 @@ public class TimeTraceAspect {
             // 로그 출력
             log.info("[TimeTrace] Method: {} | Execution Time: {} ms", targetMethodName, executionTimeMs);
         }
+    }
+    // 우대 요구사항1 예외 발생 시 로깅
+    // articleDomainPointcut()에서 지정한 메서드들에서 예외(ex)가 던져질 때만 실행
+    @AfterThrowing(pointcut = "articleDomainPointcut()", throwing = "ex")
+    public void logException(JoinPoint joinPoint, Exception ex) {
+
+        // 에러가 발생한 메서드 이름 가져오기
+        String exceptionMethodName = joinPoint.getSignature().toShortString();
+
+        // 에러 클래스 이름
+        String exceptionName = ex.getClass().getSimpleName();
+
+        // 에러 상세 메시지
+        String exceptionMessage = ex.getMessage();
+
+        // 에러 로그를 명확하게 출력
+        log.error("[Exception] Method: {} | Exception: {} | Message: {}",
+                exceptionMethodName, exceptionName, exceptionMessage);
     }
 }
