@@ -5,6 +5,7 @@ import com.likelion.backend.api.article.dto.request.ArticleUpdateRequestDTO;
 import com.likelion.backend.api.article.dto.response.ArticleCreateResponseDTO;
 import com.likelion.backend.api.article.dto.response.ArticleDetailResponseDTO;
 import com.likelion.backend.api.article.service.ArticleService;
+import com.likelion.backend.global.annotation.TrackTime;
 import com.likelion.backend.global.response.ApiResponse;
 import com.likelion.backend.global.response.SuccessStatus;
 import io.swagger.v3.oas.annotations.Operation;
@@ -23,6 +24,7 @@ public class ArticleController {
     private final ArticleService articleService;
 
     @Operation(summary = "게시글 생성 API", description = "게시글을 생성하는 API 입니다.")
+    @TrackTime
     @PostMapping
     public ResponseEntity<ApiResponse<ArticleCreateResponseDTO>> createArticle(
             @RequestBody ArticleCreateRequestDTO req

@@ -13,13 +13,16 @@ import org.springframework.stereotype.Component;
 @Aspect // 이 클래스가 AOP 역할을 한다는 것을 스프링에게 알려줌
 @Component // 스프링 빈으로 등록
 public class TimeTraceAspect {
+    //@annotation을 사용하여 @TrackTime 이름표가 붙은 곳만 타겟팅함
+    @Pointcut("@annotation(com.likelion.backend.global.annotation.TrackTime)")
+    private void trackTimePointcut() {}
 
     // article 패키지와 그 하위 패키지에 있는 모든 메서드에 적용함
     @Pointcut("execution(* com.likelion.backend.api.article..*(..))")
     private void articleDomainPointcut() {}
 
     // @Around를 사용하여 대상 메서드의 '실행 전'과 '실행 후' 모두에 개입함
-    @Around("articleDomainPointcut()")
+    @Around("trackTimePointcut()") //시간 측정 대상을 articleDomain에서 TrackTime으로 변경
     public Object executeTimeTrace(ProceedingJoinPoint joinPoint) throws Throwable { // Throwable : article 로직에서 에러가 발생할 때 밖으로 에러를 던져줌
 
         // 실행되는 대상 클래스와 메서드 이름을 간략히 가져옴 (로그 가독성을 위해)
