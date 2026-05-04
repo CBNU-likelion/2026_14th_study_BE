@@ -5,6 +5,7 @@ import com.likelion.backend.api.article.dto.request.ArticleUpdateRequestDTO;
 import com.likelion.backend.api.article.dto.response.ArticleCreateResponseDTO;
 import com.likelion.backend.api.article.dto.response.ArticleDetailResponseDTO;
 import com.likelion.backend.api.article.service.ArticleService;
+import com.likelion.backend.global.logging.MeasureExecutionTime;
 import com.likelion.backend.global.response.ApiResponse;
 import com.likelion.backend.global.response.SuccessStatus;
 import io.swagger.v3.oas.annotations.Operation;
@@ -33,6 +34,7 @@ public class ArticleController {
     }
 
     @Operation(summary = "게시글 단건 조회 API", description = "게시글을 id로 단건 조회하는 API 입니다.")
+    @MeasureExecutionTime
     @GetMapping("/{articleId}")
     public ResponseEntity<ApiResponse<ArticleDetailResponseDTO>> getArticleDetail(
             @PathVariable Long articleId
