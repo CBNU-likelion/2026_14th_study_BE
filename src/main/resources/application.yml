@@ -2,11 +2,16 @@ spring:
   application:
     name: backend
 
-# 프로파일 세팅
+  # 프로파일 세팅
   profiles:
     active: ${SPRING_PROFILES_ACTIVE:local}   # 기본 활성 프로파일 (application-local.yml 사용)
 
-# JPA 세팅
+  # http 요청/응답 검출 로그 설정
+  logging:
+    http:
+      enabled: false
+
+  # JPA 세팅
   jpa:
     hibernate:
       ddl-auto: create            # 필요 시 수정

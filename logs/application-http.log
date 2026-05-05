@@ -1,0 +1,26 @@
+[2026-05-05 22:01:30.603] [http-nio-8080-exec-1] INFO  c.l.b.g.logging.HttpLoggingFilter - HTTP Request Started - method=GET, uri=/swagger-ui/index.html
+[2026-05-05 22:01:30.671] [http-nio-8080-exec-1] INFO  c.l.b.g.logging.HttpLoggingFilter - HTTP Request Completed - method=GET, uri=/swagger-ui/index.html, status=200
+[2026-05-05 22:01:30.739] [http-nio-8080-exec-2] INFO  c.l.b.g.logging.HttpLoggingFilter - HTTP Request Started - method=GET, uri=/swagger-ui/swagger-ui.css
+[2026-05-05 22:01:30.742] [http-nio-8080-exec-3] INFO  c.l.b.g.logging.HttpLoggingFilter - HTTP Request Started - method=GET, uri=/swagger-ui/index.css
+[2026-05-05 22:01:30.744] [http-nio-8080-exec-7] INFO  c.l.b.g.logging.HttpLoggingFilter - HTTP Request Started - method=GET, uri=/swagger-ui/swagger-initializer.js
+[2026-05-05 22:01:30.744] [http-nio-8080-exec-4] INFO  c.l.b.g.logging.HttpLoggingFilter - HTTP Request Started - method=GET, uri=/swagger-ui/swagger-ui-bundle.js
+[2026-05-05 22:01:30.745] [http-nio-8080-exec-8] INFO  c.l.b.g.logging.HttpLoggingFilter - HTTP Request Started - method=GET, uri=/swagger-ui/swagger-ui-standalone-preset.js
+[2026-05-05 22:01:30.751] [http-nio-8080-exec-2] INFO  c.l.b.g.logging.HttpLoggingFilter - HTTP Request Completed - method=GET, uri=/swagger-ui/swagger-ui.css, status=200
+[2026-05-05 22:01:30.753] [http-nio-8080-exec-3] INFO  c.l.b.g.logging.HttpLoggingFilter - HTTP Request Completed - method=GET, uri=/swagger-ui/index.css, status=200
+[2026-05-05 22:01:30.762] [http-nio-8080-exec-8] INFO  c.l.b.g.logging.HttpLoggingFilter - HTTP Request Completed - method=GET, uri=/swagger-ui/swagger-ui-standalone-preset.js, status=200
+[2026-05-05 22:01:30.784] [http-nio-8080-exec-4] INFO  c.l.b.g.logging.HttpLoggingFilter - HTTP Request Completed - method=GET, uri=/swagger-ui/swagger-ui-bundle.js, status=200
+[2026-05-05 22:01:30.802] [http-nio-8080-exec-7] INFO  c.l.b.g.logging.HttpLoggingFilter - HTTP Request Completed - method=GET, uri=/swagger-ui/swagger-initializer.js, status=200
+[2026-05-05 22:01:30.937] [http-nio-8080-exec-10] INFO  c.l.b.g.logging.HttpLoggingFilter - HTTP Request Started - method=GET, uri=/v3/api-docs/swagger-config
+[2026-05-05 22:01:30.967] [http-nio-8080-exec-10] INFO  c.l.b.g.logging.HttpLoggingFilter - HTTP Request Completed - method=GET, uri=/v3/api-docs/swagger-config, status=200
+[2026-05-05 22:01:31.015] [http-nio-8080-exec-6] INFO  c.l.b.g.logging.HttpLoggingFilter - HTTP Request Started - method=GET, uri=/swagger-ui/favicon-32x32.png
+[2026-05-05 22:01:31.019] [http-nio-8080-exec-6] INFO  c.l.b.g.logging.HttpLoggingFilter - HTTP Request Completed - method=GET, uri=/swagger-ui/favicon-32x32.png, status=200
+[2026-05-05 22:01:31.031] [http-nio-8080-exec-9] INFO  c.l.b.g.logging.HttpLoggingFilter - HTTP Request Started - method=GET, uri=/v3/api-docs
+[2026-05-05 22:01:31.538] [http-nio-8080-exec-9] INFO  c.l.b.g.logging.HttpLoggingFilter - HTTP Request Completed - method=GET, uri=/v3/api-docs, status=200
+[2026-05-05 22:01:40.129] [http-nio-8080-exec-5] INFO  c.l.b.g.logging.HttpLoggingFilter - HTTP Request Started - method=GET, uri=/actuator
+[2026-05-05 22:01:40.134] [http-nio-8080-exec-5] INFO  c.l.b.g.logging.HttpLoggingFilter - HTTP Request Completed - method=GET, uri=/actuator, status=200
+[2026-05-05 22:01:46.418] [http-nio-8080-exec-1] INFO  c.l.b.g.logging.HttpLoggingFilter - HTTP Request Started - method=GET, uri=/actuator
+[2026-05-05 22:01:46.419] [http-nio-8080-exec-1] INFO  c.l.b.g.logging.HttpLoggingFilter - HTTP Request Completed - method=GET, uri=/actuator, status=200
+[2026-05-05 22:01:47.854] [http-nio-8080-exec-2] INFO  c.l.b.g.logging.HttpLoggingFilter - HTTP Request Started - method=GET, uri=/actuator
+[2026-05-05 22:01:47.855] [http-nio-8080-exec-2] INFO  c.l.b.g.logging.HttpLoggingFilter - HTTP Request Completed - method=GET, uri=/actuator, status=200
+[2026-05-05 22:03:16.916] [http-nio-8080-exec-2] INFO  c.l.b.g.logging.HttpLoggingFilter - HTTP Request Started - method=GET, uri=/actuator
+[2026-05-05 22:03:16.974] [http-nio-8080-exec-2] INFO  c.l.b.g.logging.HttpLoggingFilter - HTTP Request Completed - method=GET, uri=/actuator, status=200
