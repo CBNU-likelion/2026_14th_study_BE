@@ -9,7 +9,10 @@ spring:
   # http 요청/응답 검출 로그 설정
   logging:
     http:
-      enabled: false
+      enabled: true
+    article:
+      time-enabled: true
+      exception-enabled: true
 
   # JPA 세팅
   jpa:

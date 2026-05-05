@@ -5,6 +5,7 @@ import com.likelion.backend.api.article.dto.request.ArticleUpdateRequestDTO;
 import com.likelion.backend.api.article.dto.response.ArticleCreateResponseDTO;
 import com.likelion.backend.api.article.dto.response.ArticleDetailResponseDTO;
 import com.likelion.backend.api.article.service.ArticleService;
+import com.likelion.backend.global.logging.annotation.LoggingExecution;
 import com.likelion.backend.global.response.ApiResponse;
 import com.likelion.backend.global.response.SuccessStatus;
 import io.swagger.v3.oas.annotations.Operation;
@@ -16,12 +17,13 @@ import org.springframework.web.bind.annotation.*;
 
 @Tag(name = "게시판(Article)", description = "게시판 관련 API 입니다.")
 @RestController
-@RequestMapping( "/api/v1/articles")
+@RequestMapping("/api/v1/articles")
 @RequiredArgsConstructor
 public class ArticleController {
 
     private final ArticleService articleService;
 
+    @LoggingExecution
     @Operation(summary = "게시글 생성 API", description = "게시글을 생성하는 API 입니다.")
     @PostMapping
     public ResponseEntity<ApiResponse<ArticleCreateResponseDTO>> createArticle(
@@ -32,6 +34,7 @@ public class ArticleController {
         return ApiResponse.success(SuccessStatus.SUCCESS_ARTICLE_CREATE, resp);
     }
 
+    @LoggingExecution
     @Operation(summary = "게시글 단건 조회 API", description = "게시글을 id로 단건 조회하는 API 입니다.")
     @GetMapping("/{articleId}")
     public ResponseEntity<ApiResponse<ArticleDetailResponseDTO>> getArticleDetail(

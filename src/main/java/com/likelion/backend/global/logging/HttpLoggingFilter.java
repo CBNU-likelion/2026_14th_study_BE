@@ -18,11 +18,11 @@ import java.io.IOException;
 @Order(Ordered.HIGHEST_PRECEDENCE)
 @RequiredArgsConstructor
 public class HttpLoggingFilter extends OncePerRequestFilter {
-    private final HttpLoggingProperties properties;
+    private final LoggingProperties properties;
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
-        if (!properties.isEnabled()) {
+        if (!properties.getHttp().isEnabled()) {
             filterChain.doFilter(request, response);
             return;
         }
