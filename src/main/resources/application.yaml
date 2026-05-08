@@ -1,0 +1,25 @@
+# src/main/resources/application.yaml
+spring:
+  application:
+    name: likelion
+
+  # DB 세팅
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/likelion14?useSSL=false&characterEncoding=UTF-8&serverTimezone=Asia/Seoul
+    username: root           # 사용자 이름
+    password: jnk04          # 비밀번호
+
+  # JPA 세팅
+  jpa:
+    hibernate:
+      ddl-auto: update       # 실행 시 테이블 새로 생성, 종료 시 테이블 삭제
+    properties:
+      hibernate:
+        show_sql: true            # 로그에 DB 쿼리 출력
+        format_sql: true          # 로그에 DB 쿼리 출력 시 포맷팅
+    open-in-view: false
+
+# 애플리케이션 포트 세팅
+server:
+  port: 8080

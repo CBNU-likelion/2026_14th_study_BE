@@ -35,6 +35,9 @@ out/
 
 ### VS Code ###
 .vscode/
+<<<<<<< HEAD
 
 ### application.yml ###
 **/application-local.yml
+=======
+>>>>>>> b6d375a ([4주차] 과제 제출 - 정나경)
