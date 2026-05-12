@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/likelion?useSSL=false&characterEncoding=UTF-8&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true
+    username: root          # 본인 MySQL 사용자 이름으로 변경
+    password: 941227        # 본인 MySQL 비밀번호로 변경
+
+# Sl4J 로깅 서정
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%X{requestId:--}] [%thread] %-5level %logger{36} - %msg%n"
+  level:
+    root: info                            # 기본 로그는 INFO 레벨
+    com.likelion: debug                   # 애플리케이션 로그는 DEBUG 레벨
+    org.hibernate.SQL: debug              # JPA 쿼리 로깅
+    org.hibernate.orm.jdbc.bind: trace    # JPA 바인딩 변수 로깅 (? -> 실제 값)
+
+# JWT
+jwt:
+  access:
+    header: Authorization
+    expiration: 10800000    # 3시간 (ms)
+  refresh:
+    header: X-Refresh-Token
+    expiration: 5259400000  # 2달 (ms)
+  secretKey: F1LLAl5+h9XExVLceFb8b4DJ82g6w84LgflA8/h5WBg= # 본인 시크릿 키 (Base64)

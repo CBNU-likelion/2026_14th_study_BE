@@ -1,16 +1,25 @@
 package com.likelion.backend.api.member.entity;
 
+import com.likelion.backend.api.article.entity.Article;
 import com.likelion.backend.global.entity.BaseTimeEntity;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
-@Table(name = "member")
+@Table(
+        name = "member",
+        indexes = {
+                @Index(name = "idx_member_email", columnList = "email")
+        }
+)
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Member extends BaseTimeEntity {
 
@@ -38,4 +47,17 @@ public class Member extends BaseTimeEntity {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private Role role;                      // 권한
+
+    // 멤버 생성 정적 팩토리 메서드 -> 회원가입 시 사용
+    public static Member createMember(String email, String encodedPassword,
+                                      String name, String department) {
+        Member member = new Member();
+        member.email = email;
+        member.password = encodedPassword;
+        member.name = name;
+        member.department = department;
+        member.isDeleted = false;
+        member.role = Role.ROLE_USER;
+        return member;
+    }
 }

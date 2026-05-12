@@ -1,5 +1,6 @@
 package com.likelion.backend.api.article.entity;
 
+import com.likelion.backend.api.member.entity.Member;
 import com.likelion.backend.global.entity.BaseTimeEntity;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
